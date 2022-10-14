@@ -1310,7 +1310,7 @@ defmodule Decimal do
 
   """
   @spec to_string(t, :scientific | :normal | :xsd | :raw) :: String.t()
-  def to_string(num, type \\ :scientific)
+  def to_string(num, type \\ :normal)
 
   def to_string(%Decimal{sign: sign, coef: :NaN}, _type) do
     if sign == 1, do: "NaN", else: "-NaN"
